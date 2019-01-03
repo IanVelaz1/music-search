@@ -1,0 +1,48 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../iron-ajax/iron-ajax.html">
+<dom-module id="music-search">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <iron-ajax
+     method="get"
+     handle-as="json"
+     url="[[requestSearchUrl]]"
+     debounce-duration="300"
+    ></iron-ajax>
+    <paper-input label="search song" value="{{searchArgument}}"></paper-input>
+  </template>
+
+  <script>
+
+    class MusicSearch extends Polymer.Element {
+      static get is() { return 'music-search'; }
+      static get properties() {
+        return {
+          searchArgument:{
+            type:String,
+            value:"",
+            observer:"searchChanged"
+          },
+          requestSearchUrl:{
+            type:String,
+            value:""
+          }
+        };
+      }
+      searchChanged(){
+        this.dispatchEvent(new CustomEvent("search-made",{
+          bubbles:false,
+          composed:false,
+          detail:this.searchArgument
+        }));
+      }
+    }
+
+    window.customElements.define(MusicSearch.is, MusicSearch);
+  </script>
+</dom-module>
