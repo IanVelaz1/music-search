@@ -13,39 +13,25 @@
   </head>
   <body>
 
-    <test-fixture id="BasicTestFixture">
+    <test-fixture id="search-changed">
       <template>
         <music-search></music-search>
       </template>
     </test-fixture>
 
-    <test-fixture id="ChangedPropertyTestFixture">
-      <template>
-        <music-search prop1="new-prop1"></music-search>
-      </template>
-    </test-fixture>
-
     <script>
-      suite('music-search', () => {
-
-        test('instantiating the element with default properties works', () => {
-          const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'music-search');
-          const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello music-search!');
+      
+      suite("music-search",()=>{
+        test("event is firing",(done)=>{
+          let musicElement=fixture("search-changed");
+          musicElement.addEventListener("search-made",(event)=>{
+             assert.equal(event.detail,"")
+            done();
+          });
+          musicElement.searchChanged();
         });
-
-        test('setting a property on the element works', () => {
-          // Create a test fixture
-          const element = fixture('ChangedPropertyTestFixture');
-          assert.equal(element.prop1, 'new-prop1');
-          const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello new-prop1!');
-        });
-
       });
+    
     </script>
 
   </body>

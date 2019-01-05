@@ -1,0 +1,28 @@
+{
+  "name": "music-search",
+  "main": "music-search.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "paper-input": "PolymerElements/paper-input#2.2.3",
+    "iron-ajax": "PolymerElements/iron-ajax#2.1.3"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0"
+  },
+  "homepage": "https://github.com/jusolete/music-search",
+  "_release": "e6a231388d",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "e6a231388d29f32c1bad4164a78058e9064fb15d"
+  },
+  "_source": "https://github.com/jusolete/music-search.git",
+  "_target": "*",
+  "_originalSource": "jusolete/music-search",
+  "_direct": true
+}

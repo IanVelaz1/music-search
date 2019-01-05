@@ -1,6 +1,6 @@
 <link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="../paper-input/paper-input.html">
-<link rel="import" href="../iron-ajax/iron-ajax.html">
+
 <dom-module id="music-search">
   <template>
     <style>
@@ -8,12 +8,6 @@
         display: block;
       }
     </style>
-    <iron-ajax
-     method="get"
-     handle-as="json"
-     url="[[requestSearchUrl]]"
-     debounce-duration="300"
-    ></iron-ajax>
     <paper-input label="search song" value="{{searchArgument}}"></paper-input>
   </template>
 
