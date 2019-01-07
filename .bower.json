@@ -15,14 +15,13 @@
     "polymer": "^2.0.0"
   },
   "homepage": "https://github.com/jusolete/music-search",
-  "_release": "e6a231388d",
+  "_release": "3833098aa1",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "e6a231388d29f32c1bad4164a78058e9064fb15d"
+    "commit": "3833098aa1f163ba07ddecfc86eb4c87d01a7e62"
   },
   "_source": "https://github.com/jusolete/music-search.git",
   "_target": "*",
-  "_originalSource": "jusolete/music-search",
-  "_direct": true
+  "_originalSource": "jusolete/music-search"
 }
