@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/jusolete/music-search.svg?branch=master)](https://travis-ci.com/jusolete/music-search)
 # \<music-search\>
 
 
